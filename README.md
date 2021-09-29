@@ -1,3 +1,6 @@
 # HybridGameAws
 
 AWS for HybridGame
+
+AWSAccessKeyId=AKIAUODCI72HKWDWPV55
+AWSSecretKey=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
