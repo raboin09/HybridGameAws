@@ -1,1 +1,5 @@
--e .
+aws-cdk.core
+aws-cdk.aws_cognito
+aws-cdk.aws_lambda
+boto3
+botocore
