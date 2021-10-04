@@ -13,6 +13,18 @@
     "@aws-cdk/aws-rds:lowercaseDbIdentifier": true,
     "@aws-cdk/aws-efs:defaultEncryptionAtRest": true,
     "@aws-cdk/aws-lambda:recognizeVersionProps": true,
-    "@aws-cdk/aws-cloudfront:defaultSecurityPolicyTLSv1.2_2021": true
+    "@aws-cdk/aws-cloudfront:defaultSecurityPolicyTLSv1.2_2021": true,
+    "stage": "dev",
+    "fleet_os": "Linux",
+    "fleet_server_instance_type": "c5.large",
+    "fleet_name": "hybrid-game",
+    "fleet_type": "ON_DEMAND",
+    "fleet_concurrent_executions": 1,
+    "fleet_launch_path": "HybridGameUnreal/Binaries/Linux/HybridGameUnrealServer",
+    "fleet_launch_params": "-port=",
+    "region": "us-east-1",
+    "build_name": "dev-ug-hybrid-game-build",
+    "build_root_location": "D:\\_HybridGame\\HybridGame\\HybridGameUnreal\\WindowsServer",
+    "build_os": "AMAZON_LINUX_2"
   }
 }
