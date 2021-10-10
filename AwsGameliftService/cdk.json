@@ -18,6 +18,7 @@
     "fleet_os": "Linux",
     "fleet_server_instance_type": "c5.large",
     "fleet_name": "hybrid-game",
+    "fleet_alias": "ug-hybrid-fleet-alias",
     "fleet_type": "ON_DEMAND",
     "fleet_concurrent_executions": 1,
     "fleet_launch_path": "HybridGameUnreal/Binaries/Linux/HybridGameUnrealServer",
