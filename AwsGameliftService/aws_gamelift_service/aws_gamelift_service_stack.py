@@ -46,6 +46,7 @@ class AwsGameliftServiceStack(core.Stack):
         fleet_name = self.node.try_get_context("fleet_name")
         fleet_concurrent_executions = self.node.try_get_context("fleet_concurrent_executions")
         fleet_launch_path = self.node.try_get_context("fleet_launch_path")
+        fleet_alias = self.node.try_get_context("fleet_alias")
         fleet_launch_params = self.node.try_get_context("fleet_launch_params")
 
         fleet_name = stage + "-" + fleet_name
@@ -53,6 +54,8 @@ class AwsGameliftServiceStack(core.Stack):
         fleet_name += " " + fleet_os
         fleet_name += " " + fleet_type
         fleet_name += " " + build_version
+
+
 
         # Gamelift IAM resources and access/secret key outputs
         gamelift_policy = aws_iam.Policy(self, id="gamelift_iam_policy_id",
@@ -116,3 +119,6 @@ class AwsGameliftServiceStack(core.Stack):
                                                fleet_type=fleet_type,
                                                build_id=build_id,
                                                runtime_configuration=fleet_runtime_config)
+
+        fleet_alias = aws_gamelift.CfnAlias(self, id="gamelift_fleet_alias",
+                                            name=fleet_alias)
